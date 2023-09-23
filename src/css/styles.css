@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav {
+  @apply px-4 py-1 bg-primary flex justify-between items-center md:px-7 md:gap-0 gap-2 fixed w-screen top-0;
+}
+
+.nav > .logo {
+  @apply text-3xl font-bold leading-none lg:w-1/6 w-auto flex items-center flex-row cursor-pointer hover:translate-x-1 transition;
+}
+
+.nav > .input-search {
+  @apply md:w-6/12 w-full mx-auto bg-white rounded-md px-1 py-1 flex flex-row items-center;
+}
+
+.nav > .input-search > input {
+  @apply bg-transparent text-sm text-black border-none outline-none w-11/12 lg:pl-3 flex-1;
+}
+
+.nav > .input-search > svg {
+  @apply w-3.5 h-3.5 right-0;
+}
+
+.nav > .nav-icons {
+  @apply lg:w-1/6 text-white text-xl flex flex-row items-center justify-end gap-1;
+}
+
+.nav > .nav-icons > a {
+  @apply cursor-pointer hover:scale-110;
+}
+
+.banner-img {
+  @apply w-full  h-auto cursor-pointer mt-8;
+}
+
+.banner-img > img {
+  @apply object-contain w-full h-full;
+}
+
+.category-banner {
+  @apply flex flex-row flex-wrap items-center justify-center gap-2;
+}
+
+.category-banner > .category {
+  @apply flex flex-col gap-1 text-center items-center justify-between cursor-pointer hover:scale-105 transition min-w-[130px];
+}
+
+.category-products {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5lg:grid-cols-4 w-full items-center justify-center gap-2 bg-slate-100 py-3 px-2;
+}
+
+.category-products > .product {
+  @apply flex flex-col gap-1 text-center items-center  px-3 py-2 border border-gray-400 border-opacity-60 rounded-md bg-white;
+}
+.category-products > .product > img {
+  @apply object-contain w-full h-auto border-b border-gray-400 border-opacity-60;
+}
+.category-products > .product > .details {
+  @apply flex flex-col text-start w-11/12;
+}
+
+.category-products > .product > button {
+  @apply w-11/12 text-center border-none font-bold text-white bg-purple-700 hover:bg-purple-800 py-3 text-lg  gap-1 flex flex-row items-center justify-center;
+}
