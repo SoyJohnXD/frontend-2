@@ -106,6 +106,149 @@
       </nav>
     </header>
 
+    <!-- Register modal -->
+    <div
+    class="bg-transparent fixed inset-0 hidden items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none h-screen"
+    id="register-modal"
+  >
+    <!-- Modal Backdrop -->
+    <div
+      id="register-modal-backdrop"
+      class="w-screen hidden fixed h-screen backdrop-blur-sm top-0 z-40 bg-black bg-opacity-25"
+    ></div>
+
+    <div class="relativex z-50 ">
+      <!-- Modal content -->
+
+            <div class="relative w-fit bg-white rounded-3xl shadow">
+              <button
+                type="button"
+                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                onclick="toggleModal('register-modal')"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span class="sr-only">Cerrar modal</span>
+              </button>
+              <div class="px-6 py-6 lg:px-8 flex flex-row gap-1">
+                <div class="w-96">
+                  <h3 class="mb-4 font-bold text-black text-4xl mt-2 text-center">
+                    Registro de usuario
+                  </h3>
+                  <form class="space-y-6" action="#">
+                    <div>
+                      <label
+                        for="nombre"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >*Nombre</label
+                      >
+                      <input
+                        type="nombre"
+                        name="password"
+                        id="Nombre"
+                        placeholder="Escriba su nombre"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="apellido"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >*Apellido</label
+                      >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Escriba su apellido"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >*Correo Electronico</label
+                      >
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="name@company.com"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="password"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >*Contraseña</label
+                      >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="••••••••"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="password"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >*Confirmacion de contraseña</label
+                      >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="••••••••"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        required
+                      />
+                    </div>
+                    <div class="flex flex-col w-full text-center ">
+                      <button
+                        type="submit"
+                        class="text-white mt-1 bg-primary text-lg hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-3xl mx-auto px-7 py-3 text-center"
+                      >
+                        Registrate
+                      </button>
+                      
+                    </div>
+                </div>
+                <div class="p-2 w-96 flex items-center justify-center" >
+                  <img src="https://img.freepik.com/foto-gratis/primer-disparo-vertical-lindo-gato-europeo-pelo-corto_181624-34587.jpg?w=2000" class="object-cover w-full h-auto" alt="register-image">
+                </div>
+               
+               
+              </div>
+            
+            
+            
+         
+         
+          </div>
+    </div>
+  </div>
+
     <!-- Login Modal -->
     <div
       class="bg-transparent fixed inset-0 hidden items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none h-screen"
@@ -188,7 +331,9 @@
                   <a href="#" class="text-xs text-orange-600 hover:underline"
                     >Olvide mi contraseña</a
                   >
-                  <a href="#" class="text-xs text-orange-600 hover:underline"
+                  <a
+                    onclick="toggleModal('login-modal');toggleModal('register-modal');"
+                    class="text-xs text-orange-600 hover:underline"
                     >Registrarme</a
                   >
                 </div>
